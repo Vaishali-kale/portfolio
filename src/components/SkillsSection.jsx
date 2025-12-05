@@ -3,11 +3,11 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Frontend
-  { name: "HTML / CSS", level: 80, category: "frontend" },
-  { name: "JavaScript (ES6+)", level: 70, category: "frontend" },
+  { name: "HTML / CSS", level: 70, category: "frontend" },
+  { name: "JavaScript (ES6+)", level: 60, category: "frontend" },
   { name: "React.js", level: 60, category: "frontend" },
-  { name: "Bootstrap", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 50, category: "frontend" },
+  { name: "Bootstrap", level: 50, category: "frontend" },
+  { name: "Tailwind CSS", level: 40, category: "frontend" },
 
   // Backend
   { name: "Node.js", level: 65, category: "backend" },
@@ -20,14 +20,14 @@ const skills = [
   { name: "MongoDB", level: 50, category: "backend" },
 
   // Tools
-  { name: "Git / GitHub", level: 70, category: "tools" },
+  { name: "Git / GitHub", level: 50, category: "tools" },
   { name: "Postman", level: 35, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
-  { name: "Axios", level: 70, category: "tools" },
+  { name: "VS Code", level: 75, category: "tools" },
+  { name: "Axios", level: 40, category: "tools" },
 
   // Concepts
-  { name: "OOP Concepts", level: 85, category: "tools" },
-  { name: "JWT Authentication", level: 75, category: "tools" },
+  { name: "OOP Concepts", level: 75, category: "tools" },
+  { name: "JWT Authentication", level: 45, category: "tools" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
