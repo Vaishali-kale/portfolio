@@ -6,30 +6,30 @@ const projects = [
     title: "FoodExpress – Full Stack App",
     description:
       "A complete food delivery system with authentication, menu, cart, and admin features.",
-    image: "/projects/food.png", // FIXED
+    image: "/projects/food.png",
     tags: ["React", "Node.js", "Express", "MySQL"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/Vaishali-kale",
+    demoUrl: "https://mern-food-delivery-app.vercel.app", // replace with your deployed demo
+    githubUrl: "https://github.com/Vaishali-kale/mern-food-delivery-app",
   },
   {
     id: 2,
     title: "Hospital Management System – MERN",
     description:
       "Role-based dashboard for doctors, patients, and admins with JWT authentication.",
-    image: "/projects/Hospital.png", // FIXED (capital H)
+    image: "/projects/Hospital.png",
     tags: ["React", "MongoDB", "Node.js", "Express", "JWT"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/Vaishali-kale",
+    demoUrl: "https://mern-hospital-management.vercel.app", // replace with your deployed demo
+    githubUrl: "https://github.com/Vaishali-kale/MERN-Stack-Hospital-Management-System",
   },
   {
     id: 3,
     title: "Weather Forecast App",
     description:
       "Live weather updates with search, auto-location, and dynamic UI.",
-    image: "/projects/weather.png", // Already correct
+    image: "/projects/weather.png",
     tags: ["React", "API", "CSS"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/Vaishali-kale",
+    demoUrl: "https://weather-app.vercel.app", // replace with your deployed demo
+    githubUrl: "https://github.com/Vaishali-kale/Weather-app",
   },
 ];
 
@@ -41,15 +41,10 @@ export const ProjectsSection = () => {
           Featured <span className="text-primary"> Projects </span>
         </h2>
 
-        {/* <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my real-world projects built using modern
-          technologies focusing on performance, UI/UX, and scalability.
-        </p> */}
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
+          {projects.map((project) => (
             <div
-              key={key}
+              key={project.id}
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
               <div className="h-48 overflow-hidden">
@@ -82,6 +77,7 @@ export const ProjectsSection = () => {
                     <a
                       href={project.demoUrl}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <ExternalLink size={20} />
@@ -89,6 +85,7 @@ export const ProjectsSection = () => {
                     <a
                       href={project.githubUrl}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <Github size={20} />

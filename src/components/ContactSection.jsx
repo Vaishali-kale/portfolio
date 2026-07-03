@@ -16,7 +16,6 @@ export const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     setIsSubmitting(true);
 
     setTimeout(() => {
@@ -41,17 +40,15 @@ export const ContactSection = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-
           {/* LEFT SIDE - CONTACT INFO */}
           <div className="space-y-8">
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
 
-            <div className="space-y-6 justify-center">
-
+            <div className="space-y-6">
               {/* Email */}
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />
+                  <Mail className="h-6 w-6 text-primary" aria-label="Email" />
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
@@ -67,7 +64,7 @@ export const ContactSection = () => {
               {/* Phone */}
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />
+                  <Phone className="h-6 w-6 text-primary" aria-label="Phone" />
                 </div>
                 <div>
                   <h4 className="font-medium">Phone</h4>
@@ -83,7 +80,7 @@ export const ContactSection = () => {
               {/* Location */}
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />
+                  <MapPin className="h-6 w-6 text-primary" aria-label="Location" />
                 </div>
                 <div>
                   <h4 className="font-medium">Location</h4>
@@ -99,15 +96,18 @@ export const ContactSection = () => {
                 <a
                   href="https://linkedin.com/in/vaishali-kale-5052782b0"
                   target="_blank"
-                  className="hover:text-primary"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="hover:text-primary transition-transform hover:scale-110"
                 >
                   <Linkedin />
                 </a>
-
                 <a
                   href="https://github.com/Vaishali-kale"
                   target="_blank"
-                  className="hover:text-primary"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="hover:text-primary transition-transform hover:scale-110"
                 >
                   <Github />
                 </a>
@@ -119,9 +119,7 @@ export const ContactSection = () => {
           <div className="bg-card p-8 rounded-lg shadow-xs">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
-            {/* FIXED: onSubmit moved to form */}
-            <form className="space-y-6" onSubmit={handleSubmit}>
-
+            <form className="space-y-6" onSubmit={handleSubmit} autoComplete="off">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Your Name
@@ -131,6 +129,7 @@ export const ContactSection = () => {
                   id="name"
                   name="name"
                   required
+                  autoComplete="name"
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="Vaishali V. Kale..."
                 />
@@ -145,6 +144,7 @@ export const ContactSection = () => {
                   id="email"
                   name="email"
                   required
+                  autoComplete="email"
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="yourname@gmail.com"
                 />
@@ -171,10 +171,8 @@ export const ContactSection = () => {
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={16} />
               </button>
-
             </form>
           </div>
-
         </div>
       </div>
     </section>
